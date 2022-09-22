@@ -1,0 +1,23 @@
+AnalysisType: scheduled_rule
+Filename: scheduled_rule_no_alert.py 
+RuleID: AWS.EC2.CRUD.Activity.Useragent
+DisplayName: EC2 CRUD Activity by Useragent
+Reports:
+  MITRE ATT&CK:
+    - T1525
+Tags:
+  - Persistence
+Description: >
+  Queries for EC2 CRUD Activity by useragent. Uncommon/previously unseen useragents that perform crud actions may indicate malicious activity.
+Enabled: false
+Runbook: >
+  Review useragents performing ec2 actions. If something looks unusual such as coming from a python script or curl it may warrant further investigation. 
+ScheduledQueries:
+  - Query.EC2.CRUD.Activity.Useragent
+Severity: Low
+Tests:
+  -
+    Name: Value Returned By Query
+    ExpectedResult: false
+    Log:
+      Anything: any value
