@@ -4,7 +4,7 @@ RuleID: AWS.EC2.CRUD.Activity.Role
 DisplayName: EC2 CRUD Activity by Role
 Reports:
   MITRE ATT&CK:
-    - T1525
+    - TA0003:T1525
 Tags:
   - Persistence
 Description: >
