@@ -1,0 +1,15 @@
+AnalysisType: scheduled_query
+QueryName: MyQuery.Snowflake.DistinctLogTypes
+Enabled: false
+AthenaQuery: >
+  /* athena query not supported */
+  SELECT count(1)
+SnowflakeQuery: >
+  --return instances where account admin role is granted
+
+  --this was adapted from a Security Feature Checklist query
+
+  SELECT distinct(p_log_type) from panther_views.public.all_logs
+Schedule:
+  RateMinutes: 2
+  TimeoutMinutes: 1

@@ -1,0 +1,7 @@
+AnalysisType: pack
+PackID: GioTestPack.Snowflake
+Description: Test pack pull
+PackDefinition:
+  IDs:
+    - MyQuery.Snowflake.DistinctLogTypes
+DisplayName: My Snowflake Test Pack
